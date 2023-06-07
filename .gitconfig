@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+	name = AyonC
+	email = ayon@github.com
+[core]
+	editor = code --wait
+	autocrlf = input
+[credential]
+	helper = store
+[init]
+	defaultBranch = master
