@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/starship/.config/ ~/.config/
-ln -s ~/.dotfiles/fish/.config/fish ~/.config/fish
-ln -s ~/.dotfiles/nvim/.config/nvim ~/.config/nvim
+ln -s ~/.dotfiles/git/.gitconfig ~/
+ln -s ~/.dotfiles/starship/.config/starship.toml ~/.config/
+ln -s ~/.dotfiles/fish/.config/fish/ ~/.config/
+ln -s ~/.dotfiles/nvim/.config/nvim/ ~/.config/
