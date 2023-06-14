@@ -42,6 +42,22 @@ require("lazy").setup({
 
 	{ "jose-elias-alvarez/null-ls.nvim" },
 
+	{"lukas-reineke/indent-blankline.nvim"},
+
+	{ "echasnovski/mini.nvim", version = false },
+
+	{
+		"folke/noice.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		}
+	},
+
+	{
+		'akinsho/bufferline.nvim',
+		version = "*"
+	},
+
 	-- LSP Support
 	{ "neovim/nvim-lspconfig" },
 	{ "williamboman/mason.nvim" },
