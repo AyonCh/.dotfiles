@@ -14,13 +14,25 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- Utilities
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{
+		"nvim-tree/nvim-web-devicons",
+		lazy = true,
+	},
 
-	{ "nvim-lua/plenary.nvim", lazy = true },
+	{
+		"nvim-lua/plenary.nvim",
+		lazy = true,
+	},
 
-	{"rcarriga/nvim-notify", lazy = true},
+	{
+		"rcarriga/nvim-notify",
+		lazy = true,
+	},
 
-	{"MunifTanjim/nui.nvim", lazy = true},
+	{
+		"MunifTanjim/nui.nvim",
+		lazy = true,
+	},
 
 	-- Plugins
 	{ "nvim-telescope/telescope.nvim" },
@@ -32,10 +44,13 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		event = { "BufReadPost", "BufNewFile" }
+		event = { "BufReadPost", "BufNewFile" },
 	},
 
-	{ "nvim-treesitter/nvim-treesitter-context", event = { "BufReadPost", "BufNewFile" } },
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = { "BufReadPost", "BufNewFile" },
+	},
 
 	{ "p00f/nvim-ts-rainbow" },
 
@@ -43,53 +58,67 @@ require("lazy").setup({
 
 	{ "numToStr/Comment.nvim" },
 
-	{ "lewis6991/gitsigns.nvim", event = { "BufReadPre", "BufNewFile" } },
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 
-	{ "jose-elias-alvarez/null-ls.nvim", event = { "BufReadPre", "BufNewFile" } },
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 
-	{"lukas-reineke/indent-blankline.nvim", event = { "BufReadPost", "BufNewFile" } },
+	{
+		"jay-babu/mason-null-ls.nvim",
+	},
 
-	{ "echasnovski/mini.indentscope", version = false, event = { "BufReadPre", "BufNewFile" } },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+	},
+
+	{
+		"echasnovski/mini.indentscope",
+		version = false,
+		event = { "BufReadPre", "BufNewFile" },
+	},
 
 	{ "folke/noice.nvim" },
 
 	{
-		'akinsho/bufferline.nvim',
+		"akinsho/bufferline.nvim",
 		version = "*",
 	},
 
-	{"stevearc/dressing.nvim", lazy = true},
+	{ "stevearc/dressing.nvim", lazy = true },
 
-	{"ggandor/leap.nvim"},
+	{ "ggandor/leap.nvim" },
 
-	-- LSP Support
-	{ "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" } },
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-
-	-- Autocompletion
-	{ "hrsh7th/nvim-cmp", event = "InsertEnter" },
 	{
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"saadparwaiz1/cmp_luasnip",
-		"hrsh7th/cmp-nvim-lua" 
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		dependencies = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				build = ":MasonUpdate",
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
 	},
-
-	-- Snippets
-	{ "L3MON4D3/LuaSnip" },
-	{ "rafamadriz/friendly-snippets" },
-
 	-- Colorscheme
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		lazy = true
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		lazy = true
 	},
 })
