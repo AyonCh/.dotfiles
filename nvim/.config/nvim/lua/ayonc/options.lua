@@ -22,6 +22,7 @@ local opts = {
 	termguicolors = true,
 	splitbelow = true,
 	splitright = true,
+	updatetime = 50,
 }
 
 for option, value in pairs(opts) do
