@@ -5,17 +5,20 @@ local keymaps = {
 	{"i", "jK", "<ESC>"},
 	{"i", "JK", "<ESC>"},
 
-	-- Switching between splits
+	-- Splits
 	{"n", "<C-h>", "<C-w>h"},
 	{"n", "<C-j>", "<C-w>j"},
 	{"n", "<C-k>", "<C-w>k"},
 	{"n", "<C-l>", "<C-w>l"},
-
-	-- Resizing splits
 	{"n", "<C-left>", "<cmd>vertical resize -2<CR>"},
 	{"n", "<C-right>", "<cmd>vertical resize +2<CR>"},
 	{"n", "<C-up>", "<cmd>resize -2<CR>"},
 	{"n", "<C-down>", "<cmd>resize +2<CR>"},
+
+	-- Buffers
+	{"n", "<S-h>", "<cmd>bprevious<CR>"},
+	{"n", "<S-l>", "<cmd>bnext<CR>"},
+	{"n", "<C-w>", "<cmd>bdelete %<CR>"},
 
 	-- Utility
 	{"n", "J", "mzJ`z"},
