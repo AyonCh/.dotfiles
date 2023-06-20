@@ -24,11 +24,6 @@ require("lazy").setup({
 		lazy = true,
 	},
 
-	{
-		"MunifTanjim/nui.nvim",
-		lazy = true,
-	},
-
 	-- Plugins
 	{ "nvim-telescope/telescope.nvim" },
 
