@@ -25,11 +25,6 @@ require("lazy").setup({
 	},
 
 	{
-		"rcarriga/nvim-notify",
-		lazy = true,
-	},
-
-	{
 		"MunifTanjim/nui.nvim",
 		lazy = true,
 	},
@@ -83,14 +78,10 @@ require("lazy").setup({
 		event = { "BufReadPre", "BufNewFile" },
 	},
 
-	{ "folke/noice.nvim" },
-
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 	},
-
-	{ "stevearc/dressing.nvim", lazy = true },
 
 	{ "ggandor/leap.nvim" },
 

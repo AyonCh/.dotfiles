@@ -23,6 +23,7 @@ local opts = {
 	splitbelow = true,
 	splitright = true,
 	updatetime = 50,
+	cmdheight = 1,
 }
 
 for option, value in pairs(opts) do

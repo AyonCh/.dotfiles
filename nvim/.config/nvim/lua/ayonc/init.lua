@@ -1,3 +1,3 @@
-require('ayonc.options')
-require('ayonc.remap')
-require('ayonc.lazy')
+require("ayonc.options")
+require("ayonc.remap")
+require("ayonc.lazy")

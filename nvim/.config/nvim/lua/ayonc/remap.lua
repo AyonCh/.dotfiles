@@ -25,7 +25,7 @@ local keymaps = {
 	{ "v", ">", ">gv" },
 	{ "v", "<", "<gv" },
 	{ "v", "J", ":m '>+1<CR>gv=gv" },
-	{ "v", "K", ":m '>-2<CR>gv=gv" },
+	{ "v", "K", ":m '<-2<CR>gv=gv" },
 
 	-- Copying
 	{ "n", "<leader>y", '"+y' },
@@ -34,5 +34,5 @@ local keymaps = {
 }
 
 for _, i in ipairs(keymaps) do
-	vim.keymap.set(i[1], i[2], i[3])
+	vim.keymap.set(i[1], i[2], i[3], { silent = true })
 end
