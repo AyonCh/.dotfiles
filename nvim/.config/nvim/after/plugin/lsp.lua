@@ -47,6 +47,8 @@ if pcall(require, "lsp-zero") then
 		"jsonls",
 		"pyright",
 		"html",
+		"tailwindcss",
+		"cssls",
 	})
 
 	lsp.configure("lua_ls", require("ayonc.settings.luals"))

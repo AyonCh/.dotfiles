@@ -7,7 +7,7 @@ if pcall(require, "bufferline") then
 				require("bufferline").style_preset.no_italic,
 			},
 			indicator = {
-				icon = " ",
+				icon = "",
 				style = "icon",
 			},
 			diagnostics = "nvim_lsp",

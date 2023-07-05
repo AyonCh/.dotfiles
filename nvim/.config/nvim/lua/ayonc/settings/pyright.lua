@@ -1,9 +1,9 @@
 return {
 	settings = {
 		python = {
-			pythonPath = "py",
+			pythonPath = "python3",
 			analysis = {
-				typeCheckingMode = "off",
+				typeCheckingMode = "on",
 				autoSearchPaths = "true",
 				stubPath = "typings",
 			},

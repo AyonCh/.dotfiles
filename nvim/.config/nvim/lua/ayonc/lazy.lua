@@ -98,6 +98,7 @@ require("lazy").setup({
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 	},
+
 	-- Colorscheme
 	{
 		"rose-pine/neovim",
