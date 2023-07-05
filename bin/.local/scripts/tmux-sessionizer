@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]; then
+	selected=$1
+else
+	selected=$(find ~/dev ~/dotfiles -mindepth 1 -maxdepth 1 -type d | sed "s/\/\//\//g" | fzf --border rounded --margin 5% --padding 5% --color=fg:#c0caf5,bg:-1,hl:#bb9af7 \
+	--color=fg+:#c0caf5,bg+:#1a1b26,hl+:#7dcfff \
+	--color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+	--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a,gutter:-1)
+fi
+
+if [[ -z selected ]]; then
+	exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+	tmux new-session -s $selected_name -c $selected
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+	tmux new-session -ds $selected_name -c $selected
+fi
+
+tmux switch-client -t $selected_name
+
+if [[ -z $TMUX ]]; then
+		tmux attach
+fi
