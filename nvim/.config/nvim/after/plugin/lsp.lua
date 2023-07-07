@@ -18,26 +18,6 @@ if not luasnip_status then
 	return
 end
 
-local mason_status, mason = pcall(require, "mason")
-if not mason_status then
-	return
-end
-
-mason.setup({
-	ensure_installed = {
-		"stylua",
-		"tsserver",
-		"eslint",
-		"lua_ls",
-		"emmet_ls",
-		"jsonls",
-		"pyright",
-		"html",
-		"tailwindcss",
-		"cssls",
-	},
-})
-
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_snipmate").lazy_load()
 
@@ -74,6 +54,7 @@ local on_attach = function(client, bufnr)
 
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
 	vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
 	vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
 	vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
@@ -83,8 +64,6 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
-
-local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = {
@@ -161,12 +140,34 @@ vim.diagnostic.config({
 	virtual_text = true,
 	update_in_insert = false,
 	float = {
-		focusable = false,
+		focsable = false,
 		style = "minimal",
-		border = "rounded",
+		border = {
+			{ "╭", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "╮", "FloatBorder" },
+			{ "│", "FloatBorder" },
+			{ "╯", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "╰", "FloatBorder" },
+			{ "│", "FloatBorder" },
+		},
 		source = "always",
 		header = "",
 		prefix = "",
+	},
+})
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = {
+		{ "╭", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "╮", "FloatBorder" },
+		{ "│", "FloatBorder" },
+		{ "╯", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "╰", "FloatBorder" },
+		{ "│", "FloatBorder" },
 	},
 })
 
@@ -217,4 +218,10 @@ lspconfig["emmet_ls"].setup({
 lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = require("ayonc.settings.jsonls"),
 })
