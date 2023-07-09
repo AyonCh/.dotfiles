@@ -26,6 +26,8 @@ local keymaps = {
 	{ "v", "<", "<gv" },
 	{ "v", "J", ":m '>+1<CR>gv=gv" },
 	{ "v", "K", ":m '<-2<CR>gv=gv" },
+	{ "n", "Q", "<nop>" },
+	{ { "n", "i" }, "<C-f>", "<cmd>silent ! tmux neww fish -c tmux-sessionizer<CR><CR>" },
 
 	-- Copying
 	{ "n", "<leader>y", '"+y' },

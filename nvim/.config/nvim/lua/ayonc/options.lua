@@ -24,6 +24,8 @@ local opts = {
 	splitright = true,
 	updatetime = 50,
 	cmdheight = 1,
+	showmode = false,
+	fillchars = "eob: ",
 }
 
 for option, value in pairs(opts) do
