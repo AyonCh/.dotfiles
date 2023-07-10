@@ -49,7 +49,7 @@ local kind_icons = {
 	TypeParameter = "",
 }
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -174,19 +174,7 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
-			workspace = {
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
-				},
-			},
-		},
-	},
+	settings = require("ayonc.settings.luals"),
 })
 
 lspconfig["html"].setup({
@@ -224,4 +212,9 @@ lspconfig["jsonls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = require("ayonc.settings.jsonls"),
+})
+
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })

@@ -91,11 +91,11 @@ require("lazy").setup({
 
 	-- Colorscheme
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-	},
-	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
 	},
 })

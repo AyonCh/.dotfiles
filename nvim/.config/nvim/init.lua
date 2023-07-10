@@ -1,1 +1,1 @@
-require('ayonc')
+require("ayonc")
