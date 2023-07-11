@@ -21,6 +21,10 @@ end
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_snipmate").lazy_load()
 
+require("tailwindcss-colorizer-cmp").setup({
+	color_square_width = 2,
+})
+
 local kind_icons = {
 	Text = "",
 	Function = "",
