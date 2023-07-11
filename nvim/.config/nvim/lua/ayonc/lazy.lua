@@ -65,6 +65,10 @@ require("lazy").setup({
 
 	{ "ggandor/leap.nvim" },
 
+	{ "NvChad/nvim-colorizer.lua" },
+
+	{ "roobert/tailwindcss-colorizer-cmp.nvim" },
+
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
