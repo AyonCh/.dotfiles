@@ -1,0 +1,35 @@
+#!/bin/python3
+
+import requests
+import sys
+from bs4 import BeautifulSoup
+from PIL import Image
+
+args = sys.argv
+images = []
+pdf = []
+
+if len(args) < 2:
+    sys.exit("No input url path")
+
+# url = f"https://musescore.com/user/{args[1]}"
+url = "https://musescore.com/user/39385785/scores/8668713"
+page = requests.get(url)
+
+soup = BeautifulSoup(page.content, "html.parser")
+
+result = soup.find(id="jmuse-scroller-component")
+files = result.find_all("div", class_="EEnGW F16e6")
+
+for file in files:
+    imgUrl = file.find("img", class_="KfFlO")["src"]
+
+    img = requests.get(imgUrl)
+
+    images.append(img)
+
+for image in images:
+    img = Image.open(image).convert("RGB")
+    pdf.append(img)
+
+pdf[0].save("~/dev/", save_all=True, append_images=pdf.pop(0))
