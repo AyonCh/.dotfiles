@@ -69,6 +69,8 @@ require("lazy").setup({
 
 	{ "roobert/tailwindcss-colorizer-cmp.nvim" },
 
+	{ "onsails/lspkind.nvim" },
+
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
@@ -85,7 +87,6 @@ require("lazy").setup({
 	{ "williamboman/mason-lspconfig.nvim" },
 
 	{ "neovim/nvim-lspconfig" },
-	{ "onsails/lspkind.nvim" },
 
 	{
 		"jose-elias-alvarez/null-ls.nvim",

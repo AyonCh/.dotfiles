@@ -8,51 +8,6 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
-local cmp_status, cmp = pcall(require, "cmp")
-if not cmp_status then
-	return
-end
-
-local luasnip_status, luasnip = pcall(require, "luasnip")
-if not luasnip_status then
-	return
-end
-
-require("luasnip.loaders.from_vscode").lazy_load()
-require("luasnip.loaders.from_snipmate").lazy_load()
-
-require("tailwindcss-colorizer-cmp").setup({
-	color_square_width = 2,
-})
-
-local kind_icons = {
-	Text = "",
-	Function = "",
-	Method = "",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "",
-	Interface = "",
-	Module = "",
-	Property = "",
-	Unit = "",
-	Value = "",
-	Enum = "",
-	Keyword = "",
-	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = "",
-}
-
 local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
@@ -68,78 +23,6 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
-
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = {
-	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-	["<C-j>"] = cmp.mapping.scroll_docs(1, { "i", "c" }),
-	["<C-k>"] = cmp.mapping.scroll_docs(-1, { "i", "c" }),
-	["<CR>"] = cmp.mapping.confirm({ select = true }),
-	["<C-space>"] = cmp.mapping.complete(),
-}
-
-cmp.setup({
-	window = {
-		completion = {
-			border = {
-				{ "╭", "CmpBorder" },
-				{ "─", "CmpBorder" },
-				{ "╮", "CmpBorder" },
-				{ "│", "CmpBorder" },
-				{ "╯", "CmpBorder" },
-				{ "─", "CmpBorder" },
-				{ "╰", "CmpBorder" },
-				{ "│", "CmpBorder" },
-			},
-			winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-		},
-		documentation = {
-			border = {
-				{ "╭", "CmpDocBorder" },
-				{ "─", "CmpDocBorder" },
-				{ "╮", "CmpDocBorder" },
-				{ "│", "CmpDocBorder" },
-				{ "╯", "CmpDocBorder" },
-				{ "─", "CmpDocBorder" },
-				{ "╰", "CmpDocBorder" },
-				{ "│", "CmpDocBorder" },
-			},
-		},
-	},
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body) -- For `luasnip` users.
-		end,
-	},
-	mapping = cmp_mappings,
-	formatting = {
-		fields = { "kind", "abbr", "menu" },
-		format = function(entry, vim_item)
-			-- Kind icons
-			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[NVIM_LUA]",
-				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
-			})[entry.source.name]
-			return vim_item
-		end,
-	},
-
-	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
-		{ name = "path" },
-	}),
-	experimental = {
-		ghost_text = true,
-	},
-})
-
 vim.diagnostic.config({
 	virtual_text = true,
 	update_in_insert = false,

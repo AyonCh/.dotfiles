@@ -1,16 +1,16 @@
-if pcall(require, "Comment") then
-	require("Comment").setup({
-		opleader = {
-			line = "gc",
-			block = "gb",
-		},
-
-		mappings = {
-			basic = true,
-			extra = true,
-		},
-	})
-else
-	print("Comment not installed!")
+local comment_status, comment = pcall(require, "Comment")
+if not comment_status then
 	return
 end
+
+comment.setup({
+	opleader = {
+		line = "gc",
+		block = "gb",
+	},
+
+	mappings = {
+		basic = true,
+		extra = true,
+	},
+})

@@ -1,6 +1,6 @@
-if pcall(require, "leap") then
-	require("leap").add_default_mappings()
-else
-	print("Leap not installed!")
+local leap_status, leap = pcall(require, "leap")
+if not leap_status then
 	return
 end
+
+require("leap").add_default_mappings()

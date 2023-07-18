@@ -1,4 +1,9 @@
-require("catppuccin").setup({
+local catppuccin_status, catppuccin = pcall(require, "catppuccin")
+if not catppuccin_status then
+	return
+end
+
+catppuccin.setup({
 	flavour = "mocha",
 	transparent_background = true,
 	no_italic = false,
