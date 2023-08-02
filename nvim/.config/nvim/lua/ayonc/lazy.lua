@@ -99,8 +99,4 @@ require("lazy").setup({
 		"catppuccin/nvim",
 		name = "catppuccin",
 	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-	},
 })

@@ -3,7 +3,7 @@
 	name = AyonC
 	email = ayon@github.com
 [core]
-	editor = code --wait
+	editor = nvim
 	autocrlf = input
 [credential]
 	helper = store
