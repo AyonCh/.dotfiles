@@ -63,8 +63,6 @@ require("lazy").setup({
 
 	{ "NvChad/nvim-colorizer.lua" },
 
-	{ "roobert/tailwindcss-colorizer-cmp.nvim" },
-
 	{ "onsails/lspkind.nvim" },
 
 	{ "hrsh7th/cmp-nvim-lsp" },

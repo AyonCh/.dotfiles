@@ -11,10 +11,6 @@ end
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_snipmate").lazy_load()
 
-require("tailwindcss-colorizer-cmp").setup({
-	color_square_width = 2,
-})
-
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = {
 	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
@@ -70,7 +66,6 @@ cmp.setup({
 				luasnip = "[LuaSnip]",
 				latex_symbols = "[Latex]",
 			},
-			before = require("tailwindcss-colorizer-cmp").formatter,
 		}),
 	},
 
