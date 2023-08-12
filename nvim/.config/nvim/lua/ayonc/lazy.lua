@@ -42,8 +42,6 @@ require("lazy").setup({
 		event = { "BufReadPost", "BufNewFile" },
 	},
 
-	{ "p00f/nvim-ts-rainbow" },
-
 	{ "windwp/nvim-autopairs" },
 
 	{ "numToStr/Comment.nvim" },
