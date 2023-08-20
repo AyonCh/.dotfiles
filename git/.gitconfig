@@ -8,4 +8,4 @@
 [credential]
 	helper = store
 [init]
-	defaultBranch = master
+	defaultBranch = main
