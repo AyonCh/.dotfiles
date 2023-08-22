@@ -30,10 +30,6 @@ bufferline.setup({
 	},
 })
 
-for i = 1, 9 do
-	vim.keymap.set("n", "<leader>" .. i, "<cmd>BufferLineGoToBuffer " .. i .. "<CR>")
-end
-
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>")
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>bdelete %<CR>")

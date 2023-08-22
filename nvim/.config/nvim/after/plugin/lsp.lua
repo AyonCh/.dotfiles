@@ -87,7 +87,7 @@ lspconfig["tailwindcss"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetype = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "vue", "astro" },
+	filetype = { "html", "typescriptreact", "javascriptreact", "svelte", "vue", "astro" },
 })
 
 lspconfig["pyright"].setup({
