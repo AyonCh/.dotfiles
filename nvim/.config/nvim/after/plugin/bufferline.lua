@@ -30,6 +30,4 @@ bufferline.setup({
 	},
 })
 
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>")
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>bdelete %<CR>")
