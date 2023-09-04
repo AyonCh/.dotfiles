@@ -73,6 +73,7 @@ require("lazy").setup({
 	{ "L3MON4D3/LuaSnip" },
 	{ "saadparwaiz1/cmp_luasnip" },
 	{ "rafamadriz/friendly-snippets" },
+
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate",
@@ -86,11 +87,17 @@ require("lazy").setup({
 		"jose-elias-alvarez/null-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+
 	{ "jayp0521/mason-null-ls.nvim" },
 
 	-- Colorscheme
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+	},
+}, {
+	install = {
+
+		colorscheme = { "catppuccin" },
 	},
 })
