@@ -26,7 +26,6 @@ local opts = {
 	cmdheight = 1,
 	showmode = false,
 	fillchars = "eob: ",
-	laststatus = 3,
 }
 
 for option, value in pairs(opts) do
