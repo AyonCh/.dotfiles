@@ -30,4 +30,4 @@ bufferline.setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>x", "<cmd>bdelete %<CR>")
+vim.keymap.set("n", "<leader>x", "<cmd>bdelete! %<CR>")
