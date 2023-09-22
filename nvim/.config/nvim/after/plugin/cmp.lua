@@ -64,7 +64,6 @@ cmp.setup({
 				nvim_lsp = "[Lsp]",
 				nvim_lua = "[Lua]",
 				luasnip = "[LuaSnip]",
-				latex_symbols = "[Latex]",
 			},
 		}),
 	},
