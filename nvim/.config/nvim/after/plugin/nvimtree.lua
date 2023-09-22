@@ -16,6 +16,9 @@ nvim_tree.setup({
 	renderer = {
 		root_folder_label = false,
 	},
+	git = {
+		enable = true,
+	},
 })
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeFindFileToggle)
