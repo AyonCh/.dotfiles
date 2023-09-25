@@ -56,11 +56,6 @@ require("lazy").setup({
 		event = { "BufReadPost", "BufNewFile" },
 	},
 
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-	},
-
 	{ "NvChad/nvim-colorizer.lua" },
 
 	{ "onsails/lspkind.nvim" },

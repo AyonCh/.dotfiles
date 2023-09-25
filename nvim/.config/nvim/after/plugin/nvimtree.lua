@@ -19,6 +19,15 @@ nvim_tree.setup({
 	git = {
 		enable = true,
 	},
+	diagnostics = {
+		enable = true,
+		icons = {
+			hint = "H",
+			info = "I",
+			warning = "W",
+			error = "E",
+		},
+	},
 })
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeFindFileToggle)
