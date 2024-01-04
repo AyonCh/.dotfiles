@@ -10,7 +10,11 @@ return {
       },
     },
     format = {
-      enable = false,
+      enable = true,
+      defaultConfig = {
+        indent_style = "tab",
+        ident_size = "2",
+      },
     },
   },
 }
