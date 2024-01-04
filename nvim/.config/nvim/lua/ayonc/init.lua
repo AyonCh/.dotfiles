@@ -11,3 +11,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = yankGrp,
   pattern = "*",
 })
+
+-- local cmdGrp = vim.api.nvim_create_augroup("CommandHeight", {})
+--
+-- vim.api.nvim_create_autocmd("CmdlineEnter", {
+--   callback = function()
+--     vim.opt.cmdheight = 1
+--   end,
+--   group = cmdGrp,
+--   pattern = "*",
+-- })
+--
+-- vim.api.nvim_create_autocmd("CmdlineLeave", {
+--   callback = function()
+--     vim.opt.cmdheight = 0
+--   end,
+--   group = cmdGrp,
+--   pattern = "*",
+-- })
