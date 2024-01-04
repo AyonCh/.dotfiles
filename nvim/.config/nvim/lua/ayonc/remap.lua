@@ -1,3 +1,4 @@
+-- stylua ignore
 local keymaps = {
   -- Escaping insert mode
   { "i", "jk", "<ESC>" },
