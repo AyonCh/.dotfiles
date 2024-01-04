@@ -1,7 +1,7 @@
 asdf
 asfa
 sdf 
-return {
+  return {
   test = function() {
     console.log("helo world")
   }
