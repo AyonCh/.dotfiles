@@ -1,7 +1,7 @@
 local opts = {
   guicursor = "",
   cursorline = true,
-  scrolloff = 8,
+  scrolloff = 10,
   number = true,
   relativenumber = true,
   signcolumn = "yes",
@@ -35,5 +35,3 @@ for option, value in pairs(opts) do
 end
 
 vim.g.mapleader = " "
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
