@@ -14,6 +14,7 @@ return {
         formatting.stylua,
         formatting.black,
         diagnostics.eslint_d,
+        diagnostics.flake8,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
