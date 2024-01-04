@@ -8,15 +8,15 @@ if status is-interactive
 end
 
 function fish_user_key_bindings
-	bind -M insert \cf tmux-sessionizer
+  bind -M insert \cf tmux-sessionizer
 end
 
 function nvm
-	bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
 
 nvm use default
 
 function vim
-	nvim $argv
+  nvim $argv
 end

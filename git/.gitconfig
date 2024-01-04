@@ -1,13 +1,13 @@
 # This is Git's per-user configuration file.
 [user]
-	name = AyonC
-	email = ayon@github.com
+  name = AyonC
+  email = ayon@github.com
 [core]
-	editor = nvim
-	autocrlf = input
+  editor = nvim
+  autocrlf = input
 [credential]
-	helper = store
+  helper = store
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	rebase = false
+  rebase = false
