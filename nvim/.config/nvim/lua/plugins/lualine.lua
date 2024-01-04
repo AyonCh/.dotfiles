@@ -26,7 +26,5 @@ return {
         lualine_z = { "location" },
       },
     })
-
-    vim.opt.laststatus = 3
   end,
 }
