@@ -14,6 +14,7 @@
 
 - [OhMyFish](https://github.com/oh-my-fish/oh-my-fish)
 - [Tpm](https://github.com/tmux-plugins/tpm)
+- [RipGrep](https://github.com/BurntSushi/ripgrep)
 
 ## Setup
 
