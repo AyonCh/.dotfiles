@@ -1,0 +1,30 @@
+#!/bin/python3
+from sys import argv
+from os import listdir, path
+from PIL import Image
+
+args = argv
+if not len(args) > 1:
+    print("Provide path to a Folder containing images.")
+    exit()
+
+folder = path.abspath(args[1])
+
+images = [
+    Image.open(f"{folder}/{image}")
+    for image in listdir(folder)
+    if image[-4:] in [".jpg", ".png"]
+]
+
+if not len(images):
+    print("No images found inside folder")
+    exit()
+
+images[0].save(
+    folder[0:-1] + ".pdf",
+    "PDF",
+    save_all=True,
+    append_images=images[1:],
+    resolution=350,
+    optimize=True,
+)
