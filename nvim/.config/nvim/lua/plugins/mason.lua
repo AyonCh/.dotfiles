@@ -37,7 +37,20 @@ return {
     build = ":MasonUpdate",
     event = "UIEnter",
     config = function()
-      require("mason").setup()
+      require("mason").setup({
+        ui = {
+          border = {
+            { "╭", "FloatBorder" },
+            { "─", "FloatBorder" },
+            { "╮", "FloatBorder" },
+            { "│", "FloatBorder" },
+            { "╯", "FloatBorder" },
+            { "─", "FloatBorder" },
+            { "╰", "FloatBorder" },
+            { "│", "FloatBorder" },
+          },
+        },
+      })
     end,
   },
 }

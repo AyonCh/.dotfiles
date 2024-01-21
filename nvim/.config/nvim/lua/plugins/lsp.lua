@@ -21,9 +21,11 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
       vim.keymap.set("n", "<leader>rr", vim.lsp.buf.references, opts)
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+      vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
+
     vim.diagnostic.config({
       virtual_text = true,
       update_in_insert = false,
@@ -47,6 +49,19 @@ return {
     })
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      border = {
+        { "╭", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╮", "FloatBorder" },
+        { "│", "FloatBorder" },
+        { "╯", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "╰", "FloatBorder" },
+        { "│", "FloatBorder" },
+      },
+    })
+
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
       border = {
         { "╭", "FloatBorder" },
         { "─", "FloatBorder" },
