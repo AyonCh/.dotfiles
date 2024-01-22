@@ -28,6 +28,7 @@ local opts = {
   cmdheight = 1,
   showmode = false,
   fillchars = "eob: ",
+  inccommand = "split",
 }
 
 for option, value in pairs(opts) do
