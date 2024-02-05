@@ -25,5 +25,7 @@
   "nvim-treesitter-context": { "branch": "master", "commit": "85cf977181fb8e816e47ac05df7f756e9cb72caf" },
   "nvim-web-devicons": { "branch": "master", "commit": "140edfcf25093e8b321d13e154cbce89ee868ca0" },
   "plenary.nvim": { "branch": "master", "commit": "663246936325062427597964d81d30eaa42ab1e4" },
-  "telescope.nvim": { "branch": "master", "commit": "0902bb39ebaf76e655addc65130eb79b29abe6d2" }
+  "rose-pine": { "branch": "main", "commit": "9d7474f80afe2f0cfcb4fabfc5451f509d844b85" },
+  "telescope.nvim": { "branch": "master", "commit": "0902bb39ebaf76e655addc65130eb79b29abe6d2" },
+  "tokyonight.nvim": { "branch": "main", "commit": "610179f7f12db3d08540b6cc61434db2eaecbcff" }
 }
