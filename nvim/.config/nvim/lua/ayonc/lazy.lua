@@ -21,15 +21,6 @@ require("lazy").setup("plugins", {
 		notify = false,
 	},
 	ui = {
-		border = {
-			{ "╭", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╮", "FloatBorder" },
-			{ "│", "FloatBorder" },
-			{ "╯", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╰", "FloatBorder" },
-			{ "│", "FloatBorder" },
-		},
+		border = "rounded",
 	},
 })
