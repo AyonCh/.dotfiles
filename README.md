@@ -18,23 +18,8 @@
 
 ## Setup
 
-1. Install all the tools and dependencies
-2. Clone this repo
-
 ```bash
-git clone https://github.com/AyonC123/dotfiles.git
-```
-
-or
-
-```bash
-git clone git@github.com:AyonC123/dotfiles.git
-```
-
-3. Run setup script
-
-```bash
-./setup
+curl "https://raw.githubusercontent.com/AyonCh/dotfiles/main/install.sh" | bash
 ```
 
 4. Install Prefered [Nerd Font](https://www.nerdfonts.com/)

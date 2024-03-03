@@ -1,10 +1,11 @@
 return {
   "nvim-lualine/lualine.nvim",
+  event = "UIEnter",
   config = function()
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = "auto",
+        theme = "catppuccin",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         always_divide_middle = true,
@@ -26,5 +27,7 @@ return {
         lualine_z = { "location" },
       },
     })
+
+    vim.opt.laststatus = 3
   end,
 }

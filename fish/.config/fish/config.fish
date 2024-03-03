@@ -20,3 +20,5 @@ nvm use default
 function vim
   nvim $argv
 end
+
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)

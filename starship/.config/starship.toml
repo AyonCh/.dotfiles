@@ -147,4 +147,3 @@ format = 'via [$symbol]($style)'
 
 [zig]
 format = 'via [$symbol]($style)'
-
