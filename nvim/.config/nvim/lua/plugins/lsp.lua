@@ -24,7 +24,11 @@ return {
       vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
     end
 
-    local capabilities = cmp_nvim_lsp.default_capabilities()
+    local capabilities = vim.tbl_deep_extend(
+      "force",
+      vim.lsp.protocol.make_client_capabilities(),
+      cmp_nvim_lsp.default_capabilities()
+    )
 
     vim.diagnostic.config({
       virtual_text = true,
