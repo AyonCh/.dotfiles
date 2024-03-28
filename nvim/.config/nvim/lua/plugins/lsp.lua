@@ -93,5 +93,10 @@ return {
       on_attach = on_attach,
       settings = require("settings.jsonls"),
     })
+
+    lspconfig["clangd"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
   end,
 }

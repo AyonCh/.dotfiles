@@ -2,12 +2,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = { "BufReadPost", "BufRead" },
-  },
-  {
-    "windwp/nvim-autopairs",
-    event = { "BufReadPost", "BufRead" },
     config = function()
-      require("nvim-autopairs").setup()
+      require("treesitter-context").setup({
+        max_lines = 1,
+      })
     end,
   },
   {
