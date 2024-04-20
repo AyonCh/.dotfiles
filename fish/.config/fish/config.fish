@@ -1,7 +1,7 @@
 set -g fish_greeting
 set -U EDITOR nvim
 
-# starship init fish | source
+starship init fish | source
 
 source ~/.config/fish/paths.fish
 
