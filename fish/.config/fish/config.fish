@@ -1,6 +1,8 @@
 set -g fish_greeting
 set -U EDITOR nvim
-starship init fish | source
+
+# starship init fish | source
+# nvm use default
 
 source ~/.config/fish/paths.fish
 
@@ -14,8 +16,6 @@ end
 function nvm
   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
-
-nvm use default
 
 function vim
   nvim $argv
