@@ -2,7 +2,6 @@ set -g fish_greeting
 set -U EDITOR nvim
 
 # starship init fish | source
-# nvm use default
 
 source ~/.config/fish/paths.fish
 
