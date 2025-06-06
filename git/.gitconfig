@@ -1,8 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
   name = AyonC
-  email = ayon@github.com
-[core]
+  email = 106944474+AyonCh@users.noreply.github.com
   editor = nvim
   autocrlf = input
 [credential]
