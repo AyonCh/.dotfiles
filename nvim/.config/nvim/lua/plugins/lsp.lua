@@ -16,8 +16,12 @@ return {
       vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
       vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
       vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, opts)
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
+      vim.keymap.set("n", "[d", function()
+        vim.diagnostic.jump({ count = 1, float = true })
+      end, opts)
+      vim.keymap.set("n", "]d", function()
+        vim.diagnostic.jump({ count = -1, float = true })
+      end, opts)
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
       vim.keymap.set("n", "<leader>rr", vim.lsp.buf.references, opts)
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
@@ -62,7 +66,7 @@ return {
       on_attach = on_attach,
     })
 
-    lspconfig["tsserver"].setup({
+    lspconfig["ts_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -95,6 +99,11 @@ return {
     })
 
     lspconfig["clangd"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig["gopls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

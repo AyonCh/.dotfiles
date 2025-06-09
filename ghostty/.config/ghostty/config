@@ -6,7 +6,6 @@ font-family = "CaskaydiaCove Nerd Font Mono"
 font-size = 20
 background-opacity = 0.75
 background-blur = true
-window-padding-balance = true
 window-save-state = always
 maximize = true
 macos-option-as-alt = true
