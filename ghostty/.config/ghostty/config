@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
